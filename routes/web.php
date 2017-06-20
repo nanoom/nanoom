@@ -16,8 +16,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('articles', function() {
-    $articles = App\Article::all();
 
-    return view('articles.index', compact('articles'));
-});
+Route::resource('articles', 'ArticlesController');
